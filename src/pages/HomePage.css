@@ -1,0 +1,77 @@
+.home-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: var(--bg-gradient, linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%));
+  font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.home-page__content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  width: 100%;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 107, 157, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(255, 107, 157, 0.5);
+}
+
+.home-hero__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: #ff6b9d;
+  margin-bottom: 16px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.home-hero__subtitle,
+.home-hero__message,
+.home-hero__hint {
+  color: #b8b8d1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.home-hero__message-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 24px 12px;
+  }
+
+  .glass-card {
+    padding: 28px 20px;
+  }
+
+  .home-hero__title {
+    font-size: 2.2rem;
+  }
+
+  .home-hero__message-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
